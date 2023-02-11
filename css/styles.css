@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+:root {
+  --background-primary: #ffce47;
+  --background-primary-hover: #eeae00;
+  --background-second: #272727;
+}
+
+header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+  background-color: var(--background-primary);
+}
+
+.banner {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: var(--background-second);
+  color: white;
+  padding: 3rem;
+}
+.banner div {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.banner img {
+  width: 350px;
+}
+
+.banner-content {
+  padding: 0 3rem;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.banner-content h2 {
+  padding-bottom: 1.5rem;
+}
+.banner-content button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--background-primary);
+  cursor: pointer;
+  border-radius: 10px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  font-weight: bold;
+  border: none;
+}
+.banner-content button:hover {
+  background-color: var(--background-primary-hover);
+}
+
+footer {
+  width: 100%;
+  padding: 2.5rem;
+  background-color: var(--background-primary);
+  text-align: center;
+}
