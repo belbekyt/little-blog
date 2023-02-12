@@ -7,6 +7,7 @@
 
 body {
   font-family: "Nunito Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 :root {
@@ -80,9 +81,128 @@ header {
   background-color: var(--background-primary-hover);
 }
 
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--background-second);
+  color: white;
+}
+.main h2 {
+  padding: 2rem;
+}
+
+.main-divide {
+  width: 85%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.create-form {
+  width: 100%;
+  background-color: var(--background-second);
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+.create-form h2 {
+  margin-bottom: 2rem;
+}
+.create-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.create-form label {
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+  margin-top: 0.7rem;
+}
+.create-form textarea {
+  resize: none;
+}
+.create-form input[type=text], .create-form textarea {
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+.create-form input[type=text]:focus, .create-form input[type=text] textarea:focus, .create-form textarea:focus, .create-form textarea textarea:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 5px white;
+          box-shadow: 0 0 5px white;
+}
+.create-form input[type=submit] {
+  margin-top: 1rem;
+  border: 2px solid black;
+  padding: 0.5rem;
+  border-radius: 20px;
+  width: 130px;
+  font-weight: bold;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  color: white;
+  background: transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.create-form input[type=submit]:hover {
+  background-color: white;
+  color: black;
+}
+
 footer {
   width: 100%;
   padding: 2.5rem;
   background-color: var(--background-primary);
   text-align: center;
+}
+
+.main-posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.main-posts-post {
+  background-color: var(--background-primary);
+  color: black;
+  border-radius: 10px;
+  padding: 1rem 0;
+  margin-bottom: 2.5rem;
+  width: 400px;
+}
+.main-posts-post img {
+  width: 100%;
+  height: 250px;
+}
+.main-posts-post h3, .main-posts-post p, .main-posts-post h5 {
+  padding: 0 1rem;
+}
+.main-posts-post h3::first-letter, .main-posts-post p::first-letter, .main-posts-post h5::first-letter {
+  text-transform: capitalize;
+}
+.main-posts-post h3 {
+  margin: 0.5rem 0;
 }

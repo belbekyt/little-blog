@@ -28,8 +28,31 @@
             <a href="./sites/posts.php"><button>Create Post!</button></a>
         </div>
     </section>
-    <section>
+    <section class="main">
+        <div class="main-divide"></div>
+        <h2>See all posts right there!</h2>
+        <div class="main-posts">
+            <?php 
+                
+                require('./phpScripts/connection.php');
 
+                $query = "SELECT * FROM posts";
+                $result = mysqli_query($conn, $query);
+            
+                while ($data = mysqli_fetch_assoc($result)) {
+                    echo '
+
+                        <div class="main-posts-post">
+                            <h5>'.$data['author'].'</h5>
+                            <img src="./picture/'.$data['filename'].'" alt="Post photo" />
+                            <h3>'.$data['title'].'</h3>
+                            <p>'.$data['content'].'</p>
+                        </div>
+                    ';
+                }
+
+            ?>
+        </div>
     </section>
     <footer>
         <p>Done by Miłosz Pawłowski - Web Developer</p>

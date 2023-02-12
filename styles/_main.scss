@@ -1,0 +1,17 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-second);
+    color: white;
+
+    h2{
+        padding: 2rem;
+    }
+}
+
+.main-divide{
+    width: 85%;
+    height: 2px;
+    background-color: rgba(white, 0.8);
+}
